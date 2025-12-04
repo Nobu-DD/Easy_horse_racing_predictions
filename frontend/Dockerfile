@@ -5,4 +5,5 @@ WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn install
 COPY . .
-CMD [ "node", "server.js" ]
+EXPOSE 3000
+CMD ["yarn", "run", "dev"]
